@@ -42,4 +42,4 @@ def getNumOfSubArray(nums, val):
         
     return counts
 
-print(getNumOfSubArray([3,4,7,0,3,1,8], 3))
+print(getNumOfSubArray([3,4,7,0,3,1,8   ], 3))
