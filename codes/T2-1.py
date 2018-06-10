@@ -38,8 +38,12 @@ def getCommonNode(head1, head2):
     
     while(p1 != p2):
         p1, p2 = p1.next, p2.next
+
+    while(p1):
+        print(p1.x, " ", end='')
+        p1= p1.next
     
-    return p1
+    return 
     
 head1 = p = ListNode(0)
 p.next = ListNode(1);   p = p.next
@@ -51,4 +55,4 @@ p.next = c; p = p.next
 
 p.next = ListNode(4);
 
-print(getCommonNode(head1, head2).x)
+getCommonNode(head1, head2)
