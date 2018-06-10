@@ -25,6 +25,7 @@ def reverseList(head):
     while(head != None):
         nex = head.next
         head.next = pre
+        #如果是双向链表，加一步操作即可head.last = nex
         pre = head
         head = nex
     
