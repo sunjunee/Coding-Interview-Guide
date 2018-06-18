@@ -21,19 +21,19 @@ class Stack():
     def getMin(self):
         if(self.MinStack != []):
             return self.MinStack[-1]    #返回最小值
-    
+
     def pop(self):
-        if(self.DataStack != []):       
+        if(self.DataStack != []):
             res = self.DataStack.pop()  #数据栈的栈顶元素返回
             if(self.MinStack[-1] == res):   #如果最小值栈的栈顶与返回元素相等
                 self.MinStack.pop()     #最小值栈的栈顶出栈
             return res
-    
+
     def push(self, x):
         self.DataStack.append(x)
         if(self.MinStack == [] or x <= self.MinStack[-1]):  #最小值栈为空，或者x不大于栈顶元素，则更新最小值
             self.MinStack.append(x)
-        
+
 if __name__ == "__main__":
     s = Stack()
     s.push(1)

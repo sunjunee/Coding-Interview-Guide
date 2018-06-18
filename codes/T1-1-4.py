@@ -19,11 +19,11 @@ class Queue():
     def __init__(self):
         self.DataQueue = []
         self.MaxQueue = []
-    
+
     def getMax(self):
         if(self.MaxQueue != []):
             return self.MaxQueue[0]
-    
+
     def pop(self):
         if(self.DataQueue != []):
             res = self.DataQueue[0]
@@ -36,7 +36,7 @@ class Queue():
         while(self.MaxQueue != [] and self.MaxQueue[-1] < x):
             del self.MaxQueue[-1]
         self.MaxQueue.append(x)
-    
+
 if __name__ == "__main__":
     s = Queue()
     s.push(1)
